@@ -1,0 +1,17 @@
+{
+  "name": "social-hub-api",
+  "version": "1.0.0",
+  "description": "A social-network-API application that utilizes MongoDB as its database to effectively manage large quantities of unstructured data. The API implementation is based on the Express.js framework for routing, and Mongoose Object Data Modeling (ODM) to facilitate database operations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Allyson Gonzales",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moongoose": "^0.0.5"
+  }
+}
