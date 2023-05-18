@@ -12,11 +12,14 @@ app.use(express.static("public"));
 app.use(require("./routes"));
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/Social-Hub-API",
+  process.env.MONGODB_URI || 'mongodb://localhost/social-hub-api',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }
 );
+mongoose.connection.on('error', (err) => {
+  console.error('MongoDB connection error:', err);
+});
 
 app.listen(PORT, () => console.log(`🔗 Connected on localhost:${PORT}`));
